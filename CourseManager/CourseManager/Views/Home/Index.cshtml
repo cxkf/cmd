@@ -1,0 +1,37 @@
+﻿@model CourseManager.Models.WebsiteInfo
+@using CourseManager.Models
+
+
+
+
+
+@{
+    ViewBag.Title = "主页";
+    
+    
+    var siteInfoFromViewBag =(WebsiteInfo) ViewBag.SiteInfo;
+
+
+    var siteInfoFromViewData = (WebsiteInfo)ViewData["siteInfo"];
+}
+
+        <div class="jumbotron">
+            <h1>@Model.SiteName</h1>
+            <p>@Model.CopyRight</p>
+          
+        </div>
+   
+
+        <div class="jumbotron">
+            <h1>@siteInfoFromViewBag.SiteName</h1>
+            <p> @siteInfoFromViewBag.CopyRight</p>    
+        </div>
+
+
+
+    <div class="jumbotron">
+            <h1>@siteInfoFromViewData.SiteName</h1>
+            <p> @siteInfoFromViewData.CopyRight</p>    
+        </div>
+
+
