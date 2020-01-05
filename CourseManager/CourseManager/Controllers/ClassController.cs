@@ -11,7 +11,7 @@ namespace CourseManager.Controllers
 {
     public class ClassController : Controller
     {
-        private courseManagerEntities db = new courseManagerEntities();
+        private CourseManagerEntities db = new CourseManagerEntities();
 
         //
         // GET: /Class/
@@ -39,8 +39,8 @@ namespace CourseManager.Controllers
 
         public ActionResult Create()
         {
-            var teachers = db.Teacher.ToList();
-            ViewBag.Teacher = teachers;
+            var teachers = db.Teachers.ToList();
+            ViewBag.Teachers = teachers;
 
             return View();
         }
@@ -66,13 +66,13 @@ namespace CourseManager.Controllers
 
         public ActionResult Edit(int id = 0)
         {
-            var teachers = db.Teacher.ToList();
-            ViewBag.Teacher = teachers;
+            var teachers = db.Teachers.ToList();
+            ViewBag.Teachers = teachers;
+
             Classes classes = db.Classes.Find(id);
             if (classes == null)
             {
                 return HttpNotFound();
-                
             }
             return View(classes);
         }
@@ -89,6 +89,10 @@ namespace CourseManager.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+
+            var teachers = db.Teachers.ToList();
+            ViewBag.Teachers = teachers;
+
             return View(classes);
         }
 

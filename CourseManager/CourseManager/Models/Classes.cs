@@ -17,13 +17,12 @@ namespace CourseManager.Models
     {
         [Key]
         [Required]
+
         public int Id { get; set; }
-        [Required(ErrorMessage="请填写班级名称！")]
-        [StringLength(20,MinimumLength=2,ErrorMessage="班级名称至少两个字符!")]
-        [Display(Name="班级名称")]
+       [StringLength(20)]
         public string Name { get; set; }
-        
-        [Display(Name = "班主任")]
+       
         public Nullable<int> TeacherId { get; set; }
+     
     }
 }

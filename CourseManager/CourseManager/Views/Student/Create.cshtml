@@ -1,9 +1,8 @@
 ﻿@model CourseManager.Models.Students
-@using CourseManager.Models
+
 @{
     ViewBag.Title = "Create";
-    
-    var classes = (List<Classes>)ViewBag.Classes;
+    var teachers = (List<CourseManager.Models.Teachers>)ViewBag.Teachers;
 }
 
 <h2>Create</h2>
@@ -24,16 +23,14 @@
 
         <div class="editor-label">
             @Html.LabelFor(model => model.ClassId)
-            <select name="ClassId" class="form-contrl">
-                @foreach (var cls in classes)
-                { 
-                <option value="@cls.Id">@cls.Name</option>
-                }
-            </select>
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.ClassId)
-            @Html.ValidationMessageFor(model => model.ClassId)
+             <select name="TeacherId" class="form-control">
+                @foreach (var teacher in teachers) { 
+                <option value="@teacher.Id">@teacher.Name</option>
+                }
+            </select>
+            
         </div>
 
         <p>

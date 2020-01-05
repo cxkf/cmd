@@ -11,7 +11,7 @@ namespace CourseManager.Controllers
 {
     public class StudentController : Controller
     {
-        private courseManagerEntities db = new courseManagerEntities();
+        private CourseManagerEntities db = new CourseManagerEntities();
 
         //
         // GET: /Student/
@@ -39,8 +39,7 @@ namespace CourseManager.Controllers
 
         public ActionResult Create()
         {
-            var classes = db.Classes.ToList();
-            ViewBag.Classes = classes;
+            ViewBag.Teachers=db.Teachers.ToList();
             return View();
         }
 

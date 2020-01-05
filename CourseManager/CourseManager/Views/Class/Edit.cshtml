@@ -2,16 +2,14 @@
 @using CourseManager.Models
 @{
     ViewBag.Title = "Edit";
-     var teachers = (List<Teacher>)ViewBag.Teacher;
-}
-}
+    var teachers = (List<Teachers>)ViewBag.Teachers;
 }
 
 <h2>Edit</h2>
 
 @using (Html.BeginForm()) {
     @Html.ValidationSummary(true)
-}
+
     <fieldset>
         <legend>Classes</legend>
 
@@ -34,7 +32,7 @@
                 <option value="@teacher.Id">@teacher.Name</option>
                 }
             </select>
-           
+            
         </div>
 
         <p>

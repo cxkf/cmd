@@ -3,12 +3,10 @@
 
 @{
     ViewBag.Title = "Create";
-     var classes = (List<Classes>)ViewBag.Classes;
-      var teachers = (List<Teacher>)ViewBag.Teacher;
-       var course = (List<Course>)ViewBag.course;
+    var classes = (List<Classes>)ViewBag.Classes;
+    var teachers = (List<Teachers>)ViewBag.Teachers;
+    var courses = (List<Course>)ViewBag.Course;
 }
-      }
-
 
 <h2>Create</h2>
 
@@ -22,9 +20,8 @@
             @Html.LabelFor(model => model.ClassId)
         </div>
         <div class="editor-field">
-            <select name="ClassId" class="form-contrl">
-                @foreach (var cls in classes)
-                { 
+           <select name="ClassId" class="form-control">
+                @foreach (var cls in classes) { 
                 <option value="@cls.Id">@cls.Name</option>
                 }
             </select>
@@ -34,10 +31,9 @@
             @Html.LabelFor(model => model.CourseId)
         </div>
         <div class="editor-field">
-             <select name="CourseId" class="form-contrl">
-                @foreach (var courses in course)
-                { 
-                <option value="@courses.Id">@courses.Name</option>
+            <select name="CourseId" class="form-control">
+                @foreach (var course in courses) { 
+                <option value="@course.Id">@course.Name</option>
                 }
             </select>
         </div>
@@ -46,9 +42,8 @@
             @Html.LabelFor(model => model.TeacherId)
         </div>
         <div class="editor-field">
-             <select name="TeacherId" class="form-contrl">
-                @foreach (var teacher in teachers)
-                { 
+           <select name="TeacherId" class="form-control">
+                @foreach (var teacher in teachers) { 
                 <option value="@teacher.Id">@teacher.Name</option>
                 }
             </select>

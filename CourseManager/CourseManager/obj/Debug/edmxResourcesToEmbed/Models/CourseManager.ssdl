@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="courseManagerModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-  <EntityContainer Name="courseManagerModelStoreContainer">
-    <EntitySet Name="Classes" EntityType="courseManagerModel.Store.Classes" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="Course" EntityType="courseManagerModel.Store.Course" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="CourseManagements" EntityType="courseManagerModel.Store.CourseManagements" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="Students" EntityType="courseManagerModel.Store.Students" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="Teacher" EntityType="courseManagerModel.Store.Teacher" store:Type="Tables" Schema="dbo" />
+<Schema Namespace="CourseManagerModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="CourseManagerModelStoreContainer">
+    <EntitySet Name="Classes" EntityType="CourseManagerModel.Store.Classes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Course" EntityType="CourseManagerModel.Store.Course" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CourseManagements" EntityType="CourseManagerModel.Store.CourseManagements" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Students" EntityType="CourseManagerModel.Store.Students" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Teachers" EntityType="CourseManagerModel.Store.Teachers" store:Type="Tables" Schema="dbo" />
   </EntityContainer>
   <EntityType Name="Classes">
     <Key>
@@ -39,7 +39,7 @@
     <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="20" />
     <Property Name="ClassId" Type="int" Nullable="false" />
   </EntityType>
-  <EntityType Name="Teacher">
+  <EntityType Name="Teachers">
     <Key>
       <PropertyRef Name="Id" />
     </Key>

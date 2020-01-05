@@ -7,7 +7,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{F7411814-6292-46C4-8858-6FFEE3EDB5C9}</ProjectGuid>
+    <ProjectGuid>{83145335-14A4-477B-8041-30FDE0B5A36E}</ProjectGuid>
     <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -172,9 +172,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201911270912025_Create201911271111.cs" />
-    <Compile Include="Migrations\201911270912025_Create201911271111.Designer.cs">
-      <DependentUpon>201911270912025_Create201911271111.cs</DependentUpon>
+    <Compile Include="Migrations\201911270850144_Create201911271650.cs" />
+    <Compile Include="Migrations\201911270850144_Create201911271650.Designer.cs">
+      <DependentUpon>201911270850144_Create201911271650.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Classes.cs">
@@ -203,10 +203,9 @@
     <Compile Include="Models\Students.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Models\Teacher.cs">
+    <Compile Include="Models\Teachers.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Models\WebsiteInfo..cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -347,9 +346,6 @@
     <Content Include="Views\Course\Create.cshtml" />
     <Content Include="Views\Course\Edit.cshtml" />
     <Content Include="Views\Course\Delete.cshtml" />
-    <Content Include="Views\Home\View1.cshtml" />
-    <Content Include="Views\Home\View2.cshtml" />
-    <Content Include="Views\Home\View3.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -362,8 +358,8 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201911270912025_Create201911271111.resx">
-      <DependentUpon>201911270912025_Create201911271111.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201911270850144_Create201911271650.resx">
+      <DependentUpon>201911270850144_Create201911271650.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
@@ -384,7 +380,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>0</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:9098/</IISUrl>
+          <IISUrl>http://localhost:41850/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
